@@ -1,0 +1,71 @@
+# ============================================================
+# SVG 文本查看器 · Git 忽略规则
+# 纯前端项目，零运行时依赖；以下规则同时覆盖常见的本地开发工具
+# ============================================================
+
+# ---------- 操作系统 ----------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+.history/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+*.orig
+
+# ---------- 日志 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---------- Node / 构建产物 ----------
+# 当前项目无需 npm install；保留规则以便后续引入本地服务或测试工具
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+coverage/
+*.tsbuildinfo
+.npm/
+.pnpm-store/
+
+# ---------- 环境变量 / 本地密钥 ----------
+.env
+.env.*
+!.env.example
+*.local
+
+# ---------- 临时文件 ----------
+.tmp/
+.tmp-*/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ---------- 本地工作区数据 ----------
+.workbuddy/
+
+# ============================================================
+# 注意：以下内容属于应用本体，请勿忽略
+#   asset/*.svg              业务示例图
+#   samples/SingaPort_EFD.svg        示例原文件
+#   samples/singaport-sample.js      内嵌示例数据（离线可用）
+# ============================================================
